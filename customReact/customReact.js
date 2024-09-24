@@ -1,16 +1,25 @@
-
+//This is the method that are continusly Create the Element
 function customRender(reactElement, container)
 
 {
+  // const domElement = document.createElement(reactElement.type)
+
+  // domElement.innerHTML = reactElement.children
+  // domElement.setAttribute('href', reactElement.props.href)
+  // domElement.setAttribute('target', reactElement.props.target)
+  // container.appendChild(domElement)
+
   const domElement = document.createElement(reactElement.type)
-
   domElement.innerHTML = reactElement.children
-  domElement.setAttribute('href', reactElement.props.href)
-  domElement.setAttribute('target', reactElement.props.target)
+  for (const prop in reactElement.props){
+       domElement.setAttribute(prop,reactElement.props[prop])
+  }
   container.appendChild(domElement)
-
 }
 
+
+
+// This is the treeGraph of react  elements
 
 const reactElement = {
   type: 'a',
@@ -24,11 +33,7 @@ const reactElement = {
 
 
 
-
-
-
-
 const mainContainer = document.querySelector('#root')
 
-
+//This is section is inject the code in maincontainer
  customRender(reactElement, mainContainer)
