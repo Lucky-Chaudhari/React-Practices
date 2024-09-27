@@ -4,13 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-
+// All the Update are Add into the batches and this all manege by the  useState
  let [counter,setCounter] = useState(0)
    const addValue = () => {
    if(counter<20){
 
-    counter = counter + 1
-    setCounter(counter)
+  // set Counter is also the function and  in this function callback except karta hai
+  //jo callback ke throught ata hai tb actualy one complete honeke baad Propare Update hota hai
+
+    setCounter( (prevcounter)=>prevcounter + 1 )
+    setCounter( (counter)=>counter + 1 )
+    setCounter( (counter)=>counter + 1 )
+    setCounter( (counter)=>counter + 1 )
+    setCounter( (counter)=>counter + 1 )
+
+
 
    }
   }
