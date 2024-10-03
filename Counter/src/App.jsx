@@ -12,13 +12,14 @@ function App() {
   // set Counter is also the function and  in this function callback except karta hai
   //jo callback ke throught ata hai tb actualy one complete honeke baad Propare Update hota hai
 
-    setCounter( (prevcounter)=>prevcounter + 1 )
-    setCounter( (counter)=>counter + 1 )
-    setCounter( (counter)=>counter + 1 )
-    setCounter( (counter)=>counter + 1 )
-    setCounter( (counter)=>counter + 1 )
+    // setCounter( (prevcounter)=>prevcounter + 1 )
+    // setCounter( (counter)=>counter + 1 )
+    // setCounter( (counter)=>counter + 1 )
+    // setCounter( (counter)=>counter + 1 )
+    // setCounter( (counter)=>counter + 1 )
 
 
+    setCounter( counter + 1 )
 
    }
   }
