@@ -1,16 +1,18 @@
+
+import React from 'react';
 import './Item.css';
 
+import ItemDate from './ItemDate';
+import Card from './Card';
 
- function Item(props)
- {
-const itemName = props.name;
+const Item=(props)=>{
   return (
-
-  <div>
-    <p className ="nirma">{itemName}</p>
-    {props.children}
-  </div>
-  )
-
- }
- export default Item;
+    <Card className="item">
+      <ItemDate date ={props.date}/>
+      <div className='item_description'>
+        <h2>{props.title}</h2>
+      </div>
+    </Card>
+  );
+}
+export default Item
